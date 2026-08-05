@@ -57,6 +57,20 @@ bar.classList.contains("js")?"80%":
 bar.classList.contains("python")?"92%":"85%";
 
 });
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    if(loader){
+        setTimeout(() => {
+            loader.style.opacity = "0";
+
+            setTimeout(() => {
+                loader.remove();
+            }, 1000);
+
+        }, 1000);
+    }
+});
 
 }
 
