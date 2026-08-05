@@ -17,30 +17,26 @@ function flashLightning(){
 
     setTimeout(() => {
         lightning.classList.remove("flash");
-    },180);
+    },250);
+
+    // 30% chance of a second flash
+    if(Math.random() > 0.7){
+        setTimeout(() => {
+            lightning.classList.add("flash");
+
+            setTimeout(() => {
+                lightning.classList.remove("flash");
+            },180);
+
+        },200);
+    }
+
+    // Next lightning after 2–6 seconds
+    setTimeout(flashLightning, Math.random()*4000 + 2000);
 
 }
 
-// Lightning every 2–6 seconds
-
-setInterval(() =>{
-
-    flashLightning();
-
-},Math.random()*4000+2000);
-window.addEventListener("load",function(){
-
-    const loader=document.getElementById("loader");
-
-    loader.style.opacity="0";
-
-    setTimeout(()=>{
-
-        loader.style.display="none";
-
-    },1000);
-
-});
+window.onload = flashLightning;
 const skills=document.querySelector("#skills");
 
 const bars=document.querySelectorAll(".progress");
