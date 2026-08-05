@@ -353,32 +353,10 @@ transition:2s;
 
 }
 
-.progress.html{
-
-width:95%;
-
-}
-
-.progress.css{
-
-width:90%;
-
-}
-
-.progress.js{
-
-width:80%;
-
-}
-
-.progress.python{
-
-width:92%;
-
-}
-
+.progress.html,
+.progress.css,
+.progress.js,
+.progress.python,
 .progress.c{
-
-width:85%;
-
+    width:0;
 }
