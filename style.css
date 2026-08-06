@@ -8,9 +8,36 @@ font-family:Arial,sans-serif;
 
 body{
 
-background:#06120a;
+background:linear-gradient(
+-45deg,
+#000000,
+#062012,
+#0b3b22,
+#04150c,
+#000000
+);
+
+background-size:400% 400%;
+
+animation:bgMove 12s ease infinite;
 
 color:white;
+
+}
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
 
 }
 
